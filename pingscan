@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Author "Xc0d3"
+# Copyright "Copyright 2016, Xc0d3"
+# License "GPLv3"
+# Version "1.1"
+
+#Banner
+echo " ____  _               ____ "
+echo "|  _ \(_)_ __   __ _  / ___|  ___ __ _ _ __ "
+echo "| |_) | | \`_ \ / _\` | \___ \ / __/ _\` | '_ \ "
+echo "|  __/| | | | | (_| |  ___) | (_| (_| | | | |"
+echo "|_|   |_|_| |_|\__, | |____/ \___\__,_|_| |_|"
+echo "               |___/"
+
+if [ "$#" -ne "1" ]
+then
+echo "Usage: ./pingscan [network]"
+echo "Example	./pingscan 192.168.1"
+else
+for x in `seq 1 254` ; do
+ping -c 1 $1.$x | grep "64 bytes" | cut -d ' ' -f 4 | cut -d: -f 1 | sort -n &
+done
+fi
