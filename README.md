@@ -12,9 +12,9 @@
 Usage: 	
 
 		─[cs-academy@parrot]─[~]
-		└──╼ [★]$./pingscan [network]`
+		└──╼ [★]$./pingscan [network]
 
 Example:
 
 		─[cs-academy@parrot]─[~]
-		└──╼ [★]$./pingscan 192.168.1`
+		└──╼ [★]$./pingscan 192.168.1
